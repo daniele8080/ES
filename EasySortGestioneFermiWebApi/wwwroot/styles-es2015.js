@@ -566,13 +566,13 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\dcarafoli\source\repos\EasySortGestioneFermiWebApi\EasySortGestioneFermi\EasySortGestioneFermi\node_modules\@angular\material\prebuilt-themes\pink-bluegrey.css */"./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css");
-__webpack_require__(/*! C:\Users\dcarafoli\source\repos\EasySortGestioneFermiWebApi\EasySortGestioneFermi\EasySortGestioneFermi\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-__webpack_require__(/*! C:\Users\dcarafoli\source\repos\EasySortGestioneFermiWebApi\EasySortGestioneFermi\EasySortGestioneFermi\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
-__webpack_require__(/*! C:\Users\dcarafoli\source\repos\EasySortGestioneFermiWebApi\EasySortGestioneFermi\EasySortGestioneFermi\node_modules\font-awesome\css\font-awesome.css */"./node_modules/font-awesome/css/font-awesome.css");
-__webpack_require__(/*! C:\Users\dcarafoli\source\repos\EasySortGestioneFermiWebApi\EasySortGestioneFermi\EasySortGestioneFermi\src\styles.css */"./src/styles.css");
-__webpack_require__(/*! C:\Users\dcarafoli\source\repos\EasySortGestioneFermiWebApi\EasySortGestioneFermi\EasySortGestioneFermi\src\css\scrolling-nav.css */"./src/css/scrolling-nav.css");
-module.exports = __webpack_require__(/*! C:\Users\dcarafoli\source\repos\EasySortGestioneFermiWebApi\EasySortGestioneFermi\EasySortGestioneFermi\node_modules\ng-pick-datetime\assets\style\picker.min.css */"./node_modules/ng-pick-datetime/assets/style/picker.min.css");
+__webpack_require__(/*! C:\Users\dcarafoli\source\repos\ES\EasySortGestioneFermi\EasySortGestioneFermi\node_modules\@angular\material\prebuilt-themes\pink-bluegrey.css */"./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css");
+__webpack_require__(/*! C:\Users\dcarafoli\source\repos\ES\EasySortGestioneFermi\EasySortGestioneFermi\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! C:\Users\dcarafoli\source\repos\ES\EasySortGestioneFermi\EasySortGestioneFermi\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+__webpack_require__(/*! C:\Users\dcarafoli\source\repos\ES\EasySortGestioneFermi\EasySortGestioneFermi\node_modules\font-awesome\css\font-awesome.css */"./node_modules/font-awesome/css/font-awesome.css");
+__webpack_require__(/*! C:\Users\dcarafoli\source\repos\ES\EasySortGestioneFermi\EasySortGestioneFermi\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Users\dcarafoli\source\repos\ES\EasySortGestioneFermi\EasySortGestioneFermi\src\css\scrolling-nav.css */"./src/css/scrolling-nav.css");
+module.exports = __webpack_require__(/*! C:\Users\dcarafoli\source\repos\ES\EasySortGestioneFermi\EasySortGestioneFermi\node_modules\ng-pick-datetime\assets\style\picker.min.css */"./node_modules/ng-pick-datetime/assets/style/picker.min.css");
 
 
 /***/ })
