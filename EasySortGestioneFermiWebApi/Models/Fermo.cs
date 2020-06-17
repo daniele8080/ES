@@ -32,6 +32,7 @@ namespace EasySortGestioneFermiWebApi.Models
         public string RefAssistenza { get; set; }
         public bool? Deleted { get; set; }
         public bool? Closed { get; set; }
+        public int? Status { get; set; }
 
         public virtual Utente IdUtentePosteNavigation { get; set; }
         public virtual Utente IdUtenteSitmaNavigation { get; set; }

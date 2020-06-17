@@ -33,6 +33,10 @@ namespace EasySortGestioneFermiWebApi.Controllers
             {
                 var utente = await _context.Utente.FindAsync(f.IdUtentePoste);
                 f.IdUtentePosteNavigation = utente;
+
+                //f.DataInizio = Convert.ToDateTime(f.DataInizio).ToLocalTime();
+                //f.DataFine = Convert.ToDateTime(f.DataFine).ToLocalTime();
+                //f.DataValidazione = Convert.ToDateTime(f.DataValidazione).ToLocalTime();
             }
 
             foreach (Fermo f in fermi)
@@ -99,10 +103,19 @@ namespace EasySortGestioneFermiWebApi.Controllers
 
             if (!FermoExists(fermo.IdFermo))
             {
+                //fermo.DataInizio = fermo.DataInizio.Value.ToLocalTime();
+                //fermo.DataFine = fermo.DataFine.Value.ToLocalTime();
+                //fermo.DataValidazione = fermo.DataValidazione.Value.ToLocalTime();
+
                 _context.Fermo.Add(fermo);
             }
             else
             {
+                //fermo.DataInizio = fermo.DataInizio.Value.ToLocalTime();
+                //fermo.DataFine = fermo.DataFine.Value.ToLocalTime();
+                //fermo.DataValidazione =fermo.DataValidazione.Value.ToLocalTime();
+                               
+             
                 _context.Entry(fermo).State = EntityState.Modified;
             }
 

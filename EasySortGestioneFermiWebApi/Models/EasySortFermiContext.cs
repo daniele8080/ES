@@ -132,6 +132,10 @@ namespace EasySortGestioneFermiWebApi.Models
                     .HasColumnName("TURNO")
                     .HasMaxLength(50);
 
+                entity.Property(e => e.Status)
+                   .HasColumnName("STATUS")
+                   .HasColumnType("int");
+
                 entity.HasOne(d => d.IdUtentePosteNavigation)
                     .WithMany(p => p.FermoIdUtentePosteNavigation)
                     .HasForeignKey(d => d.IdUtentePoste)
