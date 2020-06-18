@@ -33,6 +33,10 @@ namespace EasySortGestioneFermiWebApi
             services.AddControllers();
             services.AddDbContext<EasySortFermiContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+            // Add mvc here
+            services.AddMvc();
+            services.AddSingleton<IConfiguration>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +59,8 @@ namespace EasySortGestioneFermiWebApi
             app.UseAuthorization();
             //app.UseCors(builder =>
             //builder.WithOrigins("http://localhost:4200"));   
+
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

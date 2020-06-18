@@ -25,27 +25,35 @@ namespace EasySortGestioneFermiWebApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Fermo>>> GetFermo()
         {
-            List<Fermo> fermi = new List<Fermo>();
-            fermi = await _context.Fermo.Where(x => x.Deleted == false).ToListAsync();
-
-                       
-            foreach (Fermo f in fermi)
+            try
             {
-                var utente = await _context.Utente.FindAsync(f.IdUtentePoste);
-                f.IdUtentePosteNavigation = utente;
+                List<Fermo> fermi = new List<Fermo>();
+                fermi = await _context.Fermo.Where(x => x.Deleted == false).ToListAsync();
 
-                //f.DataInizio = Convert.ToDateTime(f.DataInizio).ToLocalTime();
-                //f.DataFine = Convert.ToDateTime(f.DataFine).ToLocalTime();
-                //f.DataValidazione = Convert.ToDateTime(f.DataValidazione).ToLocalTime();
+
+                foreach (Fermo f in fermi)
+                {
+                    var utente = await _context.Utente.FindAsync(f.IdUtentePoste);
+                    f.IdUtentePosteNavigation = utente;
+
+                    //f.DataInizio = Convert.ToDateTime(f.DataInizio).ToLocalTime();
+                    //f.DataFine = Convert.ToDateTime(f.DataFine).ToLocalTime();
+                    //f.DataValidazione = Convert.ToDateTime(f.DataValidazione).ToLocalTime();
+                }
+
+                foreach (Fermo f in fermi)
+                {
+                    var utente = await _context.Utente.FindAsync(f.IdUtenteSitma);
+                    f.IdUtenteSitmaNavigation = utente;
+                }
+
+                return fermi;
             }
-
-            foreach (Fermo f in fermi)
+            catch (Exception ex)
             {
-                var utente = await _context.Utente.FindAsync(f.IdUtenteSitma);
-                f.IdUtenteSitmaNavigation = utente;
+                return BadRequest(ex.Message);
             }
-
-            return fermi;
+            
         }
 
         // GET: api/Fermi/5

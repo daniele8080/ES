@@ -11,12 +11,12 @@ namespace EasySortGestioneFermiWebApi.Models
         public Guid? IdUtentePoste { get; set; }
         public string Anomalia { get; set; }
         public string Grado { get; set; }
-        public DateTime? DataInizio { get; set; }
+        public DateTimeOffset? DataInizio { get; set; }
         public string Turno { get; set; }
         public string TipoTurno { get; set; }
         public string Modulo { get; set; }
         public string Sottoassieme { get; set; }
-        public DateTime? DataFine { get; set; }
+        public DateTimeOffset? DataFine { get; set; }
         public string ImpattoDegrado { get; set; }
         public string ImpactFactor { get; set; }
         public string DurataReale { get; set; }
@@ -27,7 +27,7 @@ namespace EasySortGestioneFermiWebApi.Models
         public string Imputabilita { get; set; }
         public string Soluzione { get; set; }
         public string DescrSoluzione { get; set; }
-        public DateTime? DataValidazione { get; set; }
+        public DateTimeOffset? DataValidazione { get; set; }
         public string RefPoste { get; set; }
         public string RefAssistenza { get; set; }
         public bool? Deleted { get; set; }

@@ -56,11 +56,11 @@ namespace EasySortGestioneFermiWebApi.Models
 
                 entity.Property(e => e.DataFine)
                     .HasColumnName("DATA_FINE")
-                    .HasColumnType("datetime");
+                    .HasColumnType("datetimeoffset");
 
                 entity.Property(e => e.DataInizio)
                     .HasColumnName("DATA_INIZIO")
-                    .HasColumnType("datetime");
+                    .HasColumnType("datetimeoffset");
 
                 entity.Property(e => e.DataValidazione).HasColumnName("DATA_VALIDAZIONE");
 
