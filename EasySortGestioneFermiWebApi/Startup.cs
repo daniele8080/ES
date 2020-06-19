@@ -1,6 +1,7 @@
 
 
 using EasySortGestioneFermiWebApi.Models;
+using EasySortGestioneFermiWebApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -36,7 +37,8 @@ namespace EasySortGestioneFermiWebApi
 
             // Add mvc here
             services.AddMvc();
-            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddSingleton(Configuration);
+            services.AddTransient<IEmailService, EmailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
