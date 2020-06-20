@@ -42,35 +42,35 @@ namespace EasySortGestioneFermiWebApi.Controllers
                 var htmlContent = "";
 
                 string tos = "";
-
                 string url = webAppUrl + "#/fermo-management?action=view&idfermo=" + fermo.IdFermo;
+
+                string emailText = @"È stata aperta una segnalazione relativa ad un guasto dell'impianto di smistamento." +
+                                   "Si prega di completare l'inserimento delle informazioni mancanti al seguente <a style='font-weight:bold' href='" + url + "' > link</a><br><br>";
+
+
                 //fermo creato da poste, sitma deve compilare
                 if (fermo.Status == 1)
                 {
-                    htmlContent = "Buongiorno, si prega di completare le informazioni per il fermo <a style=\"font-weight:bold\" href=\"" + url + "\" > qui</a>";
+                    htmlContent = emailText;
                     tos = email4Sitma;
                 }
                 //fermo aggiornato da sitma, poste deve compilare
                 if (fermo.Status == 2)
                 {
-                    htmlContent = "Buongiorno, si prega di completare le informazioni per il fermo <a style=\"font-weight:bold\" href=\"" + url + "\" > qui</a>";
-
+                    htmlContent = emailText;
                     tos = email4Poste;
 
                 }
                 //fermo aggiornato da poste, sitma deve validare e chiudere
                 if (fermo.Status == 3)
                 {
-                    htmlContent = "Buongiorno, si prega di completare le informazioni per il fermo <a style=\"font-weight:bold\" href=\"" + url + "\" > qui</a>";
-
+                    htmlContent = emailText;
                     tos = email4Sitma;
                 }
                 //fermo chiuso
                 if (fermo.Status == 4)
                 {
-                    htmlContent = "Buongiorno, il <a style=\"font-weight:bold\" href=\"" + url + "\" > fermo</a> è stato validato e chiuso";
-
-
+                    htmlContent = @"È stata chiusa la segnalazione relativa ad un guasto dell'impianto di smistamento al seguente <a style='font-weight:bold' href='" + url + "' > link</a><br><br>";
                     tos = email4Poste + ";" + email4Sitma;                   
                 }
 

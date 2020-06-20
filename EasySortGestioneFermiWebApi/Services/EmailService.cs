@@ -54,15 +54,35 @@ namespace EasySortGestioneFermiWebApi.Services
             Img.ContentId = Guid.NewGuid().ToString();
             string str = @"  
             <table  width='800px'>  
+                <tr>
+                    <td colspan='3'>Questa email è generata automaticamente dal sistema di Sitma, per cortesia non rispondere a questo messaggio perché non ci giungerebbe.
+                                   Puoi contattare l'Assistenza clienti utilizzando i riferimenti in calce alla presente. <br><br></td>
+                </tr>
                 <tr>  
-                    <td colspan='2' > " + message + @" </td>  
-                </tr>  
-                <tr> 
-                    <td width='550px'></<td>
+                    <td colspan='3' > " + message + @" </td>  
+                </tr>      
+               <tr>                    
+                    <td>  
+                      <b>After sales</b>
+                    </td>  
+                    <td width='600px' colspan='2'></<td>
+                </tr>
+                <tr>                     
+                    <td>  
+                       <a href='mailto:service@sitma.it'>service@sitma.it</a>
+                    </td>  
+                    <td width='600px' colspan='2'></<td>
+                </tr>
+                <tr>                    
+                    <td>    
+                       +39 059 780 311 
+                    </td>  
                     <td>  
                       <img src='cid:" + Img.ContentId + @"' id ='img' alt='https://www.sitma.it/' width='90px' height='30px'/>   
                     </td>  
-                </tr></table>  
+                    <td width='600px'></<td>
+                </tr>               
+            </table>  
             ";
             AlternateView AV =
             AlternateView.CreateAlternateViewFromString(str, null, MediaTypeNames.Text.Html);
