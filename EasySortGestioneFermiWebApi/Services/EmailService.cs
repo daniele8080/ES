@@ -65,13 +65,13 @@ namespace EasySortGestioneFermiWebApi.Services
                     <td>  
                       <b>After sales</b>
                     </td>  
-                    <td width='600px' colspan='2'></<td>
+                    <td width='550px' colspan='2'></<td>
                 </tr>
                 <tr>                     
                     <td>  
                        <a href='mailto:service@sitma.it'>service@sitma.it</a>
                     </td>  
-                    <td width='600px' colspan='2'></<td>
+                    <td  colspan='2'></<td>
                 </tr>
                 <tr>                    
                     <td>    
@@ -80,7 +80,7 @@ namespace EasySortGestioneFermiWebApi.Services
                     <td>  
                       <img src='cid:" + Img.ContentId + @"' id ='img' alt='https://www.sitma.it/' width='90px' height='30px'/>   
                     </td>  
-                    <td width='600px'></<td>
+                    <td></<td>
                 </tr>               
             </table>  
             ";
