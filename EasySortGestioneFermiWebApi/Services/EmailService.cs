@@ -53,34 +53,25 @@ namespace EasySortGestioneFermiWebApi.Services
             LinkedResource Img = new LinkedResource(filePath);
             Img.ContentId = Guid.NewGuid().ToString();
             string str = @"  
+       
+
             <table  width='800px'>  
-                <tr>
+                 <tr>
                     <td colspan='3'>Questa email è generata automaticamente dal sistema di Sitma, per cortesia non rispondere a questo messaggio perché non ci giungerebbe.
                                    Puoi contattare l'Assistenza clienti utilizzando i riferimenti in calce alla presente. <br><br></td>
                 </tr>
                 <tr>  
-                    <td colspan='3' > " + message + @" </td>  
+                    <td colspan='3'> " + message + @" </td>  
                 </tr>      
-               <tr>                    
-                    <td>  
-                      <b>After sales</b>
-                    </td>  
-                    <td width='550px' colspan='2'></<td>
-                </tr>
-                <tr>                     
-                    <td>  
-                       <a href='mailto:service@sitma.it'>service@sitma.it</a>
-                    </td>  
-                    <td  colspan='2'></<td>
-                </tr>
-                <tr>                    
-                    <td>    
-                       +39 059 780 311 
-                    </td>  
-                    <td>  
-                      <img src='cid:" + Img.ContentId + @"' id ='img' alt='https://www.sitma.it/' width='90px' height='30px'/>   
-                    </td>  
-                    <td></<td>
+               <tr>        
+                    <td>
+                        <div style='display: flex; flex-direction:row;'>                      
+                            <div style='flex: 1 1 0px;'><b>After sales</b><br><a href='mailto:service@sitma.it'>service@sitma.it</a><br>+39 059780311</div>
+                            <div cstyle='flex: 1 1 0px;'>&nbsp;&nbsp;</div>      
+                            <div style='flex: 1 1 0px;'><br><img src='cid:" + Img.ContentId + @"' id ='img' alt='https://www.sitma.it/' width='100px' height='30px'/><br></div>
+                        </div>
+                    <td/>                    
+                    <td colspan='2' width='50%'></td>
                 </tr>               
             </table>  
             ";
