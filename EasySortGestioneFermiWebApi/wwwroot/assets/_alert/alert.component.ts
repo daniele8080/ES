@@ -54,6 +54,10 @@ export class AlertComponent implements OnInit, OnDestroy {
     }
 
     removeAlert(alert: Alert) {
+
+        // remove alert
+        this.alerts = this.alerts.filter(x => x !== alert);
+        /*+
         if (this.fade) {
             // fade out alert
             this.alerts.find(x => x === alert).fade = true;
@@ -65,7 +69,7 @@ export class AlertComponent implements OnInit, OnDestroy {
         } else {
             // remove alert
             this.alerts = this.alerts.filter(x => x !== alert);
-        }
+        }*/
     }
 
     cssClass(alert: Alert) {
